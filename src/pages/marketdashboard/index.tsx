@@ -91,7 +91,6 @@ const MarketDashboard = () => {
                   <div className="flex w-full md:w-1/3">Nothofagus Dombeyi</div>
                   <div className="flex w-full md:w-1/3">12000 [m2]</div>
                 </div>
-
               </div>
               <div className="flex flex-col w-full lg:w-1/2 gap-4">
                 <div className="text-white py-8">Specie Info</div>

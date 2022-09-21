@@ -40,6 +40,18 @@
   background: -webkit-linear-gradient(347deg, #41a58d, #1b2f2a);
 }
 
+.bg-contact {
+  background-image: url("./assets/background/contact-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-marketplace {
+  background-image: url("./assets/background/top-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .middle-liner::before {
   pointer-events: none;
   content: "";
@@ -88,4 +100,15 @@ input {
   background: transparent;
   outline: none;
   color: white;
+}
+
+.input-value {
+  text-align: center;
+}
+
+.input-contact {
+  background: transparent;
+  outline: none;
+  border: white;
+  border: 1px solid #fff;
 }

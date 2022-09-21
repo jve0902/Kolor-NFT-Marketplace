@@ -34,12 +34,13 @@ module.exports = {
       ...theme('colors'),
       'main': '#090909',
       'body': '#171717',
+      'light': '#252526',
     }),
     borderColor: theme => ({
       ...theme('colors'),
       'main': '#41a58d',
       'create': '#515151',
-      'body': '#171717',
+      'body': '#1B1B1B',
     }),
 
     borderRadius: {
@@ -68,13 +69,14 @@ module.exports = {
         '0': '0',
         '1/4': '25vh',
         '1/2': '50vh',
+        '3/5': '60vh',
         '3/4': '75vh',
         '4/5': '80vh',
         'full': '100vh',
       },
       spacing: {
-        '128': '32rem',
-        '320': '80rem'
+        '136': '34rem',
+        '200': '50rem'
       },
       colors: {
         app: {
@@ -94,6 +96,9 @@ module.exports = {
           },
           dark: {
             400: '#8F8F8F',
+          },
+          main: {
+            100: '#41a58d',
           }
         }
       },

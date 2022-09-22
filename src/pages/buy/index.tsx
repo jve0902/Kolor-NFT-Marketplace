@@ -1,7 +1,18 @@
 import { useState } from "react";
 import Layout from "../../layout";
 import SideBar from "../../components/sidebar";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import Map from "../../assets/image/map.png";
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1
+};
 
 const Buy = () => {
   const [value, setValue] = useState("1");
@@ -15,9 +26,15 @@ const Buy = () => {
         <div className="flex gap-8 lg:gap-12 xl:gap-16 bg-dashboard min-h-screen w-full">
           <SideBar />
           <div className="flex flex-col-reverse md:flex-row pt-48 w-full px-4 md:px-0 gap-6 xl:gap-8 pb-16">
-            <div className="flex flex-col w-full md:w-1/2 xl:w-2/3 gap-12">
-              <div className="flex flex-col border border-main rounded-3xl gap-4 px-4 py-4">
-                <img src={Map} alt="map" className="w-96" />
+            <div className="flex flex-col w-full md:w-1/3 xl:w-1/2 gap-12">
+              <div className="flex flex-col w-full border border-main rounded-3xl gap-4 px-4 py-4">
+                <div className="xl:w-1/3 p-2">
+                  <Slider {...settings}>
+                    <img src={Map} alt='map1' className="w-48" />
+                    <img src={Map} alt='map2' className="w-48" />
+                    <img src={Map} alt='map3' className="w-48" />
+                  </Slider>
+                </div>
                 <div className="text-app-dark-400 text-sm">Land details</div>
                 <div className="flex gap-4">
                   <div className="text-white">Land Owner:</div>
@@ -69,7 +86,7 @@ const Buy = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col w-full md:w-1/2 xl:w-1/3 gap-6 pr-8 xl:pr-12">
+            <div className="flex flex-col w-full md:w-5/12 lg:w-6/12 xl:w-4/12  gap-6 pr-8 xl:pr-12">
               <div className="text-sm text-white">Be part of this land too!</div>
               <div className="text-app-dark-400">This land had an initial offering of 12000 land tokens. Currently there's a total of 11995/12000 tokens available.</div>
               <div className="flex flex-col py-4 gap-4 items-center justify-center">

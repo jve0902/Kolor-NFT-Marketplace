@@ -1,4 +1,7 @@
 import { useNavigate } from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 type Props = {
   image: any;
@@ -10,13 +13,27 @@ type Props = {
   species: string;
 }
 
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1
+};
+
 const MarketplaceItem = ({image, title, size, country, region, city, species}: Props) => {
   const navigate = useNavigate();
 
   return (
     <>
       <div className="flex flex-col px-6 py-6 gap-4 bg-body rounded-3xl">
-        <img src={image} alt={title} />
+        <div className="w-full">
+          <Slider {...settings}>
+            <img src={image} alt={title} />
+            <img src={image} alt={title} />
+            <img src={image} alt={title} />
+          </Slider>
+        </div>
         <div className="text-white text-sm">{title}</div>
         <div className="flex gap-3">
           <div className="text-white">Land Size(M2):</div>

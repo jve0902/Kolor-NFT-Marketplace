@@ -40,6 +40,10 @@
   background: -webkit-linear-gradient(347deg, #41a58d, #1b2f2a);
 }
 
+.button-bg-gradient {
+  background: -webkit-linear-gradient(0deg, #000000, #378a77);
+}
+
 .bg-contact {
   background-image: url("./assets/background/contact-background.png");
   background-repeat: no-repeat;
@@ -48,6 +52,12 @@
 
 .bg-marketplace {
   background-image: url("./assets/background/top-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-benefit {
+  background-image: url("./assets/background/benefit-background.png");
   background-repeat: no-repeat;
   background-size: cover;
 }

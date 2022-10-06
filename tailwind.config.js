@@ -35,6 +35,7 @@ module.exports = {
       'main': '#090909',
       'body': '#171717',
       'light': '#252526',
+      'grey': '#1A1A1A'
     }),
     borderColor: theme => ({
       ...theme('colors'),
@@ -99,6 +100,9 @@ module.exports = {
           },
           main: {
             100: '#41a58d',
+          },
+          red: {
+            DEFAULT: '#CE1415'
           }
         }
       },

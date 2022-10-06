@@ -1,14 +1,24 @@
+import { useState } from "react";
 import Layout from "../../layout";
 import { useAppContext } from "../../context/AppContext";
 import InvestmentItem from "../../components/items/investmentitem";
 import { investmentList } from "./investment";
 import SideBar from "../../components/sidebar";
+import Copy from "../../assets/icons/ico_copy.svg";
+import Tick from "../../assets/icons/ico_tick.svg";
 import MiniMap from "../../assets/image/mini-map.png";
 import Wallet from "../../assets/image/wallet.png";
 
 const Dashboard = () => {
   const context = useAppContext();
-  console.log('isExplored', context.clickedExplore);
+  const [copied, setCopied] = useState(false);
+  const copyClipboard = () => {
+    navigator.clipboard.writeText("0xc2b836e5326619caaee6cf16c772c2ec56f392b9");
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 3000);
+  }
 
   return (
     <>
@@ -41,8 +51,19 @@ const Dashboard = () => {
               <div className="flex flex-col w-full lg:w-1/2 2xl:w-2/5 bg-token-detail lg:mx-8 mr-6 md:mr-8 lg:mr-12 xl:mr-16 2xl:mr-24 rounded-3xl px-4 md:px-8 xl:px-10 2xl:px-12 3xl:px-16 py-10 gap-10">
                 <div className="flex flex-col items-center justify-center">
                   <div className="text-white text-sm">Native Balances</div>
+                  <div className="flex w-full justify-center gap-2">
+                    <span className="text-white truncate">0xc2b836e5326619caaee6cf16c772c2ec56f392b9</span>
+                    <button onClick={() => copyClipboard()}>
+                      {
+                        copied ?
+                        <img src={Tick} alt="tick" />
+                        :
+                        <img src={Copy} alt="copy" />
+                      }
+                    </button>
+                  </div>
                   <div className="text-app-dark-400">Your current cUSD balance is:</div>
-                  <div className="text-white text-md">$2368.10</div>
+                  <div className="text-white text-md">$0</div>
                 </div>
                 <div className="flex flex-col gap-4">
                   <div className="flex lg:flex-col xl:flex-row gap-6">
@@ -66,8 +87,9 @@ const Dashboard = () => {
                 </div>
                 <div className="flex text-md justify-center text-white items-center">Land Tokens Balances</div>
                 <div className="flex flex-col">
-                  <div className="flex lg:flex-col xl:flex-row gap-6">
-                    <div className="hidden sm:flex-col lg:hidden xl:flex flex-col items-center justify-center px-5 py-5 bg-token-light rounded-3xl">
+                  <div className="flex lg:flex-col xl:flex-row gap-6 justify-center items-center">
+                    <button className="rounded-xl text-white button-bg-gradient px-8 py-3">Click here to verify!</button>
+                    {/* <div className="hidden sm:flex-col lg:hidden xl:flex flex-col items-center justify-center px-5 py-5 bg-token-light rounded-3xl">
                       <img src={Wallet} alt="wallet" />
                     </div>
                     <div className="flex flex-col justify-center">
@@ -76,7 +98,7 @@ const Dashboard = () => {
                         <div className="text-white">From</div>
                         <div className="text-app-dark-400 underline">Ignacio Garafoulich's Land</div>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

@@ -26,7 +26,7 @@ const MarketplaceItem = ({image, title, size, country, region, city, species}: P
 
   return (
     <>
-      <div className="flex flex-col px-6 py-6 gap-4 bg-body rounded-3xl">
+      <div className="flex flex-col px-6 py-6 gap-4 bg-body rounded-3xl w-full">
         <div className="w-full">
           <Slider {...settings}>
             <img src={image} alt={title} />

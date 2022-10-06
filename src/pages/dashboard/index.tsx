@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Layout from "../../layout";
-import { useAppContext } from "../../context/AppContext";
 import InvestmentItem from "../../components/items/investmentitem";
 import { investmentList } from "./investment";
 import SideBar from "../../components/sidebar";
@@ -10,7 +9,6 @@ import MiniMap from "../../assets/image/mini-map.png";
 import Wallet from "../../assets/image/wallet.png";
 
 const Dashboard = () => {
-  const context = useAppContext();
   const [copied, setCopied] = useState(false);
   const copyClipboard = () => {
     navigator.clipboard.writeText("0xc2b836e5326619caaee6cf16c772c2ec56f392b9");

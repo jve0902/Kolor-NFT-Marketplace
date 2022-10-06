@@ -2,6 +2,7 @@ import { useState } from "react";
 import Layout from "../../layout";
 import ProgressBar from "../../components/progressbar";
 import SideBar from "../../components/sidebar";
+import { Modal } from "../../components/modal";
 import Copy from "../../assets/icons/ico_copy.svg";
 import Tick from "../../assets/icons/ico_tick.svg";
 import CostaMap from "../../assets/image/costa_map.png";
@@ -9,6 +10,8 @@ import OutlineWallet from "../../assets/image/outlined_wallet.png"
 
 const Wallet = () => {
 	const [copied, setCopied] = useState(false);
+	const [open, setOpen] = useState(false);
+
   const copyClipboard = () => {
     navigator.clipboard.writeText("0xc2b836e5326619caaee6cf16c772c2ec56f392b9");
     setCopied(true);
@@ -61,10 +64,12 @@ const Wallet = () => {
 							</div>
 							<p className="truncate text-white">0xc2b836e5326619caaee6cf16c772c2ec56f392b9</p>
 						</div>
-						<button className="text-white button-gradient px-6 py-2 rounded-3xl">Done!</button>
+						<button className="text-white button-gradient px-6 py-2 rounded-3xl" onClick={() => setOpen(true)}>Done!</button>
 					</div>
 				</div>
 			</div>
+			{/* <Modal open={ open } onClose={ () => setOpen(false) } type='success' amount={5} /> */}
+			<Modal open={ open } onClose={ () => setOpen(false) } type='error' amount={5} />
 		</Layout>
 	)
 }

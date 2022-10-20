@@ -6,6 +6,7 @@ import Dashboard from "./dashboard";
 import Marketplace from "./marketplace";
 import Buy from "./buy";
 import MarketDashboard from "./marketdashboard";
+import MarketPay from "./marketpay";
 import Wallet from "./wallet";
 
 const Pages = () => {
@@ -19,6 +20,7 @@ const Pages = () => {
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/buy" element={<Buy />} />
           <Route path="/marketdashboard" element={<MarketDashboard />} />
+          <Route path="/pay" element={<MarketPay />} />
           <Route path="/wallet" element={<Wallet />} />
         </Routes>
       </BrowserRouter>

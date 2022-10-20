@@ -5,6 +5,7 @@ import SideBar from "../../components/sidebar";
 import { Modal } from "../../components/modal";
 import Copy from "../../assets/icons/ico_copy.svg";
 import Tick from "../../assets/icons/ico_tick.svg";
+import Speaker from "../../assets/image/speaker.png";
 import CostaMap from "../../assets/image/costa_map.png";
 import OutlineWallet from "../../assets/image/outlined_wallet.png"
 
@@ -39,7 +40,10 @@ const Wallet = () => {
 						</div>
 					</div>
 					<div className="flex flex-col w-full xl:w-1/3 gap-6">
-						<span className="text-white">First thing first. You need to add cash to your Kolor wallet.</span>
+					  <div className="flex gap-2 border border-main rounded-2xl px-4 py-6">
+              <img src={Speaker} className="px-6 mt-2 w-16 h-4" alt="speaker" />
+              <span className="text-app-main-100">First thing first. You need to add cash to your Kolor wallet.</span>
+            </div>
 						<div className="flex gap-6 border border-main rounded-2xl px-4 py-6">
 							<div className="rounded-full border border-main text-app-main-100 h-11 w-11 items-center px-4 py-2">A</div>
 							<div className="flex flex-col w-full">

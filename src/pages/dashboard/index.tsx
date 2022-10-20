@@ -44,7 +44,11 @@ const Dashboard = () => {
                   <div className="flex w-full sm:w-1/2 lg:w-full xl:w-1/2 text-white">Date of purchase:</div>
                   <div className="flex flex-row sm:flex-row-reverse lg:flex-row xl:flex-row-reverse w-full sm:w-1/2 lg:w-full xl:w-1/2 text-app-dark-400">Viernes, 24 de junio de 2022, 12:25:30 h.</div>
                 </div>
-                <button className="rounded-full h-12 px-4 py-2 border border-main text-white w-40">Explore Land</button>
+                <div className="flex flex-col xl:flex-row gap-4 w-full">
+                  <button className="w-full rounded-full px-4 py-2 button-gradient border-main text-white">Explore Land</button>
+                  <button className="w-full rounded-full px-4 py-2 border border-main text-white">LLC</button>
+                  <button className="w-full rounded-full px-4 py-2 border border-main text-white">Ownership registry</button>
+                </div>
               </div>
               <div className="flex flex-col w-full lg:w-1/2 2xl:w-2/5 bg-token-detail lg:mx-8 mr-6 md:mr-8 lg:mr-12 xl:mr-16 2xl:mr-24 rounded-3xl px-4 md:px-8 xl:px-10 2xl:px-12 3xl:px-16 py-10 gap-10">
                 <div className="flex flex-col items-center justify-center">

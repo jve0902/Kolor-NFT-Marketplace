@@ -80,29 +80,40 @@ const Marketplace = () => {
               <div className="flex flex-col gap-4 w-full lg:w-2/3">
                 <span className="text-white">Featured Lands</span>
                 <div className="flex flex-col bg-benefit py-8 px-2 md:px-4 lg:px-8 rounded-2xl gap-8">
-                  <span className="text-white text-md">Purchase the conservation rigths over a piece of land, looking forward to:</span>
-                  <div className="flex border border-main rounded-3xl px-2 md:px-4 lg:px-8 py-6 gap-2 md:gap-4 lg:gap-8">
-                    <div className="rounded-full bg-gradient text-white px-2 h-6">
-                      1
+                  <div className="flex flex-col">
+                    <span className="text-white text-md text-gradient">Purchase today... Conserve for the future!</span>
+                    <span className="text-sm text-slate-300">Become a patagonian landowner and look forward to:</span>
+                  </div>
+                  <div className="flex flex-col gap-3">
+                    <div className="flex border border-main rounded-3xl px-2 md:px-4 lg:px-8 py-6 gap-2 md:gap-4 lg:gap-8">
+                      <div className="rounded-full bg-gradient text-white px-2 h-6">
+                        1
+                      </div>
+                      <span className="text-white">Ensure land conservation for 30 days.</span>
                     </div>
-                    <span className="text-white">Monitoring and protecting some of the wildest trees and species in Patagonia!</span>
+                    <div className="flex border border-main rounded-3xl px-2 md:px-4 lg:px-8 py-6 gap-2 md:gap-4 lg:gap-8">
+                      <div className="rounded-full bg-gradient text-white px-2 h-6">
+                        2
+                      </div>
+                      <span className="text-white">Protect and monitor some of the whildest trees and animals in Patagonia!</span>
+                    </div>
                   </div>
                   <span className="text-white">Trees</span>
                   <TreeSlider responsive={responsive} />
                   <span className="text-white">Animals</span>
                   <AnimalSlider responsive={responsive} />
-                  <div className="flex flex-col md:flex-row gap-8">
-                    <div className="flex w-full md:w-1/2 gap-2 md:gap-4 lg:gap-8 border border-main rounded-3xl px-2 md:px-4 lg:px-8 py-6">
+                  <div className="flex flex-col gap-3">
+                    <div className="flex w-full gap-2 md:gap-4 lg:gap-8 border border-main rounded-3xl px-2 md:px-4 lg:px-8 py-6">
                       <div className="flex flex-col rounded-full bg-gradient text-white px-2 h-6">
-                        2
-                      </div>
-                      <span className="text-white">Make guided visits</span>
-                    </div>
-                    <div className="flex w-full md:w-1/2 gap-2 md:gap-4 lg:gap-8 border border-main rounded-3xl px-2 md:px-4 lg:px-8 py-6">
-                      <div className="rounded-full bg-gradient text-white px-2 h-6">
                         3
                       </div>
                       <span className="text-white">Future carbon credit yields</span>
+                    </div>
+                    <div className="flex w-full gap-2 md:gap-4 lg:gap-8 border border-main rounded-3xl px-2 md:px-4 lg:px-8 py-6">
+                      <div className="rounded-full bg-gradient text-white px-2 h-6">
+                        4
+                      </div>
+                      <span className="text-white">Transparent legal ownership registries.</span>
                     </div>
                   </div>
                 </div>

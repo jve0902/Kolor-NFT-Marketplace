@@ -1,9 +1,11 @@
 
+import { useNavigate } from "react-router-dom";
 import Layout from "../../layout";
 import SideBar from "../../components/sidebar";
 import Map from "../../assets/image/map.png";
 
 const MarketDashboard = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Layout title="Marketplace Dashboard">
@@ -66,7 +68,7 @@ const MarketDashboard = () => {
             <div className="text-app-dark-400 text-sm">Start</div>
             <div className="flex flex-col md:flex-row gap-4 lg:px-12 w-full">
               <button className="w-full flex items-center justify-center text-white rounded-2xl py-4 border border-main">Land Tokens available</button>
-              <button className="w-full flex button-gradient items-center justify-center text-white rounded-2xl py-4">Let's Kolor Soon!</button>
+              <button className="w-full flex button-gradient items-center justify-center text-white rounded-2xl py-4" onClick={() => navigate('/pay')}>Let's Kolor Soon!</button>
             </div>
             <div className="flex flex-col w-full lg:flex-row gap-8 border border-main rounded-2xl px-4 md:px-8 lg:px-10 xl:px-12 py-12">
               <div className="flex flex-col w-full lg:w-1/2 gap-4 text-white">

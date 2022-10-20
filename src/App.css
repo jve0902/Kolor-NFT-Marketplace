@@ -40,6 +40,10 @@
   background: -webkit-linear-gradient(347deg, #41a58d, #1b2f2a);
 }
 
+.bg-common-gradient {
+  background: -webkit-linear-gradient(347deg, #585858, #000000);
+}
+
 .button-bg-gradient {
   background: -webkit-linear-gradient(0deg, #000000, #378a77);
 }
